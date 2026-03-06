@@ -1,16 +1,143 @@
-MIT License
+﻿Vridhira Attribution License
+Version 1.0 — March 2026
 
 Copyright (c) 2026 Himanshu — Vridhira (https://github.com/Newbie-Himanshu)
+All rights reserved.
 
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
-The above copyright notice and this permission notice shall be included in all
-copies or substantial portions of the Software.
+GRANT OF LICENSE
+
+Subject to full and continuous compliance with ALL conditions set out in this
+License, the Licensor (Himanshu — Vridhira) hereby grants you a worldwide,
+royalty-free, non-exclusive, non-sublicensable license to:
+
+  (a) use, copy, and run this software for personal or commercial purposes;
+  (b) modify this software and create derivative works;
+  (c) distribute copies of this software or derivative works.
+
+This grant is conditional. Any violation of the conditions below immediately
+and automatically terminates all rights granted under this License without
+notice.
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+MANDATORY ATTRIBUTION CONDITIONS
+
+The following attribution conditions are NON-NEGOTIABLE and must be satisfied
+at all times. Failure to comply constitutes copyright infringement and a
+material breach of this License.
+
+───────────────────────────────────────────────────────────────────────────
+CONDITION 1 — PROJECT README ATTRIBUTION (Public Repositories)
+───────────────────────────────────────────────────────────────────────────
+
+If you distribute, publish, or publicly host a project that includes this
+software or any portion of it, your project's README (or equivalent primary
+documentation file) MUST contain a clearly visible attribution section that
+includes ALL of the following, word-for-word or substantively equivalent:
+
+    Based on Vridhira — E-Commerce for Indian Artisans
+    Original author: Himanshu (https://github.com/Newbie-Himanshu)
+    Source: https://github.com/vridhira/vridhira-frontend
+    License: Vridhira Attribution License v1.0
+
+This attribution must:
+  • Appear in the README of your project's primary source repository.
+  • Be visible without expanding collapsed sections or hidden elements.
+  • Include working hyperlinks to both the author profile and the source repo.
+  • Not be placed after a fold, in a footnote only, or in a file other than
+    the primary documentation.
+
+───────────────────────────────────────────────────────────────────────────
+CONDITION 2 — STOREFRONT UI CREDITS (Deployed Storefronts)
+───────────────────────────────────────────────────────────────────────────
+
+If you deploy a live storefront (any publicly accessible website, app, or
+hosted service) built on this software, the storefront MUST display visible
+credits to the original project at ALL times. Specifically:
+
+  (a) The VridhiraCredits component (located at
+      src/modules/layout/components/vridhira-credits/) or equivalent visible
+      UI credit block MUST remain present and rendered in the storefront
+      footer or an equivalently prominent, always-visible location on every
+      page of the deployed storefront.
+
+  (b) The credits MUST link to:
+        — https://github.com/vridhira/vridhira-frontend  (project source)
+        — https://github.com/Newbie-Himanshu  (original author)
+
+  (c) Credits must be LEGIBLE — font size no smaller than 10px, colour
+      contrast ratio of at least 3:1 against the background, and not hidden
+      by CSS (display:none, visibility:hidden, opacity:0, or equivalent).
+
+───────────────────────────────────────────────────────────────────────────
+CONDITION 3 — CREDITS ARE ADDITIVE ONLY (Non-Removal Clause)
+───────────────────────────────────────────────────────────────────────────
+
+You MAY add your own credits, branding, and attribution to the credits
+section or component.
+
+You MAY NOT:
+  • Remove, replace, hide, obscure, or comment-out any existing attribution
+    text, links, or copyright notices referencing Himanshu or Vridhira.
+  • Rename, refactor, or restructure the VridhiraCredits component in a way
+    that removes or suppresses the original attribution from the rendered UI.
+  • Modify the copyright notice at the top of any source file to remove or
+    alter the original author line.
+
+You MUST treat all existing attribution as a floor — you build on top of it,
+never beneath it.
+
+───────────────────────────────────────────────────────────────────────────
+CONDITION 4 — COPYRIGHT NOTICE PRESERVATION (Source Files)
+───────────────────────────────────────────────────────────────────────────
+
+All copies or substantial portions of this software — whether modified or
+unmodified — MUST retain:
+  • This License file in full, unmodified, in the root of the repository.
+  • The copyright notice block at the top of every source file that contains
+    one (Author, GitHub, Copyright, License header comments).
+
+You may add additional copyright notices above the existing ones for your
+own contributions. You may not alter or delete the existing notices.
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+TERMINATION AND ENFORCEMENT
+
+1. AUTOMATIC TERMINATION
+   Any violation of Conditions 1, 2, 3, or 4 immediately and automatically
+   terminates all rights granted under this License. Upon termination you
+   must cease all use, distribution, and hosting of the software and any
+   derivative works.
+
+2. CURE PERIOD
+   If you become aware that you are in violation, you have 14 (fourteen)
+   calendar days from the date you first knew (or reasonably should have
+   known) of the violation to bring yourself into full compliance. If you
+   cure the violation within this 14-day window, your rights under this
+   License are reinstated. If you do not cure within 14 days, termination
+   is permanent and no reinstatement is available.
+
+3. LEGAL ACTION
+   Violations of this License constitute copyright infringement under
+   applicable law (including but not limited to the Indian Copyright Act,
+   1957 and international copyright treaties). The Licensor reserves all
+   rights to pursue legal remedies including:
+     • Injunctive relief (takedown of infringing deployments or repositories)
+     • Damages for copyright infringement
+     • Recovery of legal costs and attorney fees
+     • Any other relief available under applicable law
+
+4. REPORTING VIOLATIONS
+   To report a violation of this License, open an issue at:
+     https://github.com/Newbie-Himanshu/vridhira-frontend/issues
+   or contact the author directly via the GitHub profile above.
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+DISCLAIMER OF WARRANTIES
 
 THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
 IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
@@ -20,16 +147,22 @@ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 
--------------------------------------------------------------------------------
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
-This project is built and maintained by Himanshu as part of the Vridhira
-open e-commerce initiative for Indian artisans.
+ACKNOWLEDGEMENT OF FRAMEWORK
+
+This project uses MedusaJS (https://github.com/medusajs/medusa) as its
+commerce engine, licensed separately under the MIT License by Medusa, Inc.
+This acknowledgement does not alter the terms of this License with respect
+to the Vridhira codebase.
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+PROJECT DETAILS
 
   Project : Vridhira — E-Commerce for Indian Artisans
   Author  : Himanshu
   GitHub  : https://github.com/Newbie-Himanshu
   Org     : https://github.com/vridhira
   Repo    : https://github.com/Newbie-Himanshu/vridhira-frontend
-
-This project uses MedusaJS (https://github.com/medusajs/medusa) as its
-commerce engine, licensed separately under the MIT License by Medusa, Inc.
+  License : Vridhira Attribution License v1.0

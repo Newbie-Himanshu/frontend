@@ -45,7 +45,7 @@
 
 <p align="center">
   <a href="./LICENSE">
-    <img src="https://img.shields.io/badge/license-MIT-blue?style=flat-square" alt="MIT License" />
+    <img src="https://img.shields.io/badge/license-Vridhira_Attribution_v1.0-8B4513?style=flat-square" alt="Vridhira Attribution License v1.0" />
   </a>
   <img src="https://img.shields.io/badge/version-0.1.0-8B4513?style=flat-square" alt="v0.1.0" />
   <a href="https://nextjs.org">
@@ -96,7 +96,7 @@
 | 10 | [📚 Resources](#-resources) | Official docs for every integration |
 | 11 | [🤝 Contributing](#-contributing) | How to fork, branch, commit, and PR |
 | 12 | [🙏 Acknowledgements](#-acknowledgements) | Open-source projects that power Vridhira |
-| 13 | [📜 License](#-license) | MIT — free to use, fork, and self-host |
+| 13 | [📜 License](#-license) | Vridhira Attribution License v1.0 — use freely, **always credit** |
 | 14 | [👤 Author](#-author) | Built by Himanshu for India's artisans |
 
 </details>
@@ -404,12 +404,15 @@ Vridhira is built on the shoulders of these excellent open-source projects:
 
 ## 📜 License
 
-Distributed under the **MIT License** — see [LICENSE](./LICENSE) for full text.
+Distributed under the **Vridhira Attribution License v1.0** — see [LICENSE](./LICENSE) for full text.
 
 Copyright © 2026 **Himanshu — Vridhira**. All rights reserved.
 
 > [!NOTE]
-> MIT means you are **free to fork, self-host, and modify** this project for your own store. Attribution is appreciated but not required. Commercial use is permitted.
+> You are **free to fork, self-host, modify, and use commercially** — but you **must** publicly credit Vridhira and Himanshu in your README and keep the storefront credits visible. Removing attribution is a license violation. See [LICENSE](./LICENSE) for exact conditions.
+
+> [!WARNING]
+> This is **not standard MIT**. It is a custom attribution-required license. If you fork this project, read [LICENSE](./LICENSE) before deploying publicly.
 
 ---
 
