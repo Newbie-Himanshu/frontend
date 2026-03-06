@@ -6,9 +6,9 @@
   GitHub:         https://github.com/Newbie-Himanshu
   Repo:           https://github.com/Newbie-Himanshu/vridhira-frontend
   Copyright:      2026 Himanshu — Vridhira. All rights reserved.
-  License:        MIT
+  License:        Vridhira Attribution License v1.0
   Last Modified:  Himanshu via GitHub Copilot on 2026-03-06
-  Change:         Enhanced TOC, added tips/callouts, keyword highlights
+  Change:         Nav + links converted to badge images (no underlines); license updated
   ============================================================
 -->
 
@@ -30,17 +30,17 @@
 </p>
 
 <p align="center">
-  <a href="#-quickstart">Quickstart</a>
-  &nbsp;·&nbsp;
-  <a href="#-features">Features</a>
-  &nbsp;·&nbsp;
-  <a href="#-india-first-commerce">India-First</a>
-  &nbsp;·&nbsp;
-  <a href="#-payments">Payments</a>
-  &nbsp;·&nbsp;
-  <a href="https://github.com/Newbie-Himanshu/vridhira-backend">Backend Repo</a>
-  &nbsp;·&nbsp;
-  <a href="#-contributing">Contributing</a>
+  <a href="#-quickstart"><img src="https://img.shields.io/badge/-Quickstart-8B4513?style=flat-square" alt="Quickstart" /></a>
+  &nbsp;
+  <a href="#-features"><img src="https://img.shields.io/badge/-Features-8B4513?style=flat-square" alt="Features" /></a>
+  &nbsp;
+  <a href="#-india-first-commerce"><img src="https://img.shields.io/badge/-India--First-FF6600?style=flat-square" alt="India-First" /></a>
+  &nbsp;
+  <a href="#-payments"><img src="https://img.shields.io/badge/-Payments-1976D2?style=flat-square" alt="Payments" /></a>
+  &nbsp;
+  <a href="https://github.com/Newbie-Himanshu/vridhira-backend"><img src="https://img.shields.io/badge/-Backend_Repo-24292f?style=flat-square&logo=github&logoColor=white" alt="Backend Repo" /></a>
+  &nbsp;
+  <a href="#-contributing"><img src="https://img.shields.io/badge/-Contributing-2da44e?style=flat-square" alt="Contributing" /></a>
 </p>
 
 <p align="center">
@@ -107,12 +107,12 @@
 
 **Vridhira** is an **open-source**, **India-first** e-commerce storefront designed for artisans, weavers, potters, and handcraft sellers — people whose work deserves a digital home built for **how India actually shops**.
 
-This is the **customer-facing storefront**. It connects to the **[Vridhira Backend](https://github.com/Newbie-Himanshu/vridhira-backend)** — a **MedusaJS v2** server with custom Indian commerce modules — to deliver shopping experiences optimised for Indian buyers: **UPI**, **COD with OTP**, **GST-inclusive pricing**, **Hindi-ready typography**, and **Shiprocket logistics**.
+This is the **customer-facing storefront**. It connects to the **Vridhira Backend** — a **MedusaJS v2** server with custom Indian commerce modules — to deliver shopping experiences optimised for Indian buyers: **UPI**, **COD with OTP**, **GST-inclusive pricing**, **Hindi-ready typography**, and **Shiprocket logistics**.
 
 > _Think of it as Shopify's Indian artisan cousin — **open source**, **self-hosted**, and built on **Indian payment rails** from day one._
 
 > [!IMPORTANT]
-> This repository is the **storefront only**. You also need the [vridhira-backend](https://github.com/Newbie-Himanshu/vridhira-backend) running to serve data. Both repos must be set up together for a working store.
+> This repository is the **storefront only**. You also need the Vridhira Backend running to serve data. Both repos must be set up together for a working store. See [Related Repositories](#-related-repositories).
 
 ---
 
@@ -184,7 +184,7 @@ Vridhira is **not** a generic global storefront with INR added as an afterthough
 |:---|:---|:---|
 | **Node.js** | >= 20 | Use [nvm](https://github.com/nvm-sh/nvm) to manage versions |
 | **Yarn** | >= 1.22 | `npm install -g yarn` |
-| **Vridhira Backend** | Running at `:9000` | See [vridhira-backend](https://github.com/Newbie-Himanshu/vridhira-backend) |
+| **Vridhira Backend** | Running at `:9000` | See [Related Repositories](#-related-repositories) |
 
 > [!TIP]
 > On **Windows**, use [nvm-windows](https://github.com/coreybutler/nvm-windows) instead of nvm. Run your terminal as Administrator when installing global packages.
@@ -217,7 +217,7 @@ cp .env.template .env.local
 yarn dev
 ```
 
-Your storefront is live at **[http://localhost:8000](http://localhost:8000)**.
+Your storefront is live at `http://localhost:8000`.
 
 > [!TIP]
 > **Always start the backend first**, then the storefront. The storefront makes API calls to `NEXT_PUBLIC_MEDUSA_BACKEND_URL` on load — if the backend isn't up, you'll see empty pages rather than errors.
@@ -272,14 +272,14 @@ Copy `.env.template` to `.env.local` and fill in your values:
 
 | Layer | Technology | Why Vridhira chose it |
 |:---|:---|:---|
-| Framework | [Next.js 15](https://nextjs.org) | **App Router** + RSC + ISR — fast by default, SEO-friendly |
-| Language | [TypeScript](https://www.typescriptlang.org) | **Type safety** across the full stack — catches bugs at compile time |
-| Styling | [Tailwind CSS](https://tailwindcss.com) | Utility-first with **Vridhira's earthy design tokens** (saffron, teak, wheat) |
-| Commerce Engine | [MedusaJS v2](https://medusajs.com) | **Headless, modular, MIT-licensed** — full control, no vendor lock-in |
-| Payments | [Razorpay](https://razorpay.com) | India's **most complete** payment gateway — UPI + COD + EMI in one SDK |
-| Logistics | [Shiprocket](https://shiprocket.in) | India's **leading D2C** fulfillment & real-time tracking network |
-| Search | [Algolia](https://www.algolia.com) | **Sub-50ms** instant search with relevance tuning and facets |
-| Package Manager | [Yarn](https://yarnpkg.com) | Fast, **deterministic** installs with lockfile consistency |
+| Framework | <a href="https://nextjs.org"><img src="https://img.shields.io/badge/Next.js-15-000000?style=flat-square&logo=nextdotjs&logoColor=white" alt="Next.js 15" /></a> | **App Router** + RSC + ISR — fast by default, SEO-friendly |
+| Language | <a href="https://www.typescriptlang.org"><img src="https://img.shields.io/badge/TypeScript-5-3178C6?style=flat-square&logo=typescript&logoColor=white" alt="TypeScript" /></a> | **Type safety** across the full stack — catches bugs at compile time |
+| Styling | <a href="https://tailwindcss.com"><img src="https://img.shields.io/badge/Tailwind-CSS-06B6D4?style=flat-square&logo=tailwindcss&logoColor=white" alt="Tailwind CSS" /></a> | Utility-first with **Vridhira's earthy design tokens** (saffron, teak, wheat) |
+| Commerce Engine | <a href="https://medusajs.com"><img src="https://img.shields.io/badge/MedusaJS-v2-7c3aed?style=flat-square" alt="MedusaJS v2" /></a> | **Headless, modular, open-licensed** — full control, no vendor lock-in |
+| Payments | <a href="https://razorpay.com"><img src="https://img.shields.io/badge/Razorpay-payments-2196F3?style=flat-square" alt="Razorpay" /></a> | India's **most complete** payment gateway — UPI + COD + EMI in one SDK |
+| Logistics | <a href="https://shiprocket.in"><img src="https://img.shields.io/badge/Shiprocket-logistics-FF6B00?style=flat-square" alt="Shiprocket" /></a> | India's **leading D2C** fulfillment & real-time tracking network |
+| Search | <a href="https://www.algolia.com"><img src="https://img.shields.io/badge/Algolia-search-003DFF?style=flat-square&logo=algolia&logoColor=white" alt="Algolia" /></a> | **Sub-50ms** instant search with relevance tuning and facets |
+| Package Manager | <a href="https://yarnpkg.com"><img src="https://img.shields.io/badge/Yarn-v4-2C8EBB?style=flat-square&logo=yarn&logoColor=white" alt="Yarn" /></a> | Fast, **deterministic** installs with lockfile consistency |
 
 > [!TIP]
 > **MedusaJS v2** ships with a modular architecture — you can swap or extend individual modules (payments, inventory, fulfillment) without touching others. Vridhira uses this to plug in Razorpay and Shiprocket as first-class modules.
@@ -331,8 +331,8 @@ vridhira-frontend/
 
 | Repository | Description | Visibility |
 |:---|:---|:---:|
-| [vridhira-frontend](https://github.com/vridhira/vridhira-frontend) | **This repo** — public-facing brand org storefront | 🌐 Public |
-| [vridhira-backend](https://github.com/Newbie-Himanshu/vridhira-backend) | MedusaJS v2 backend — **COD**, **Razorpay queue**, **Shiprocket**, **Wishlist**, **Algolia** modules | 🔒 Private |
+| <a href="https://github.com/vridhira/vridhira-frontend"><img src="https://img.shields.io/badge/vridhira--frontend-storefront-8B4513?style=flat-square&logo=github&logoColor=white" alt="vridhira-frontend" /></a> | **This repo** — public-facing brand org storefront | 🌐 Public |
+| <a href="https://github.com/Newbie-Himanshu/vridhira-backend"><img src="https://img.shields.io/badge/vridhira--backend-backend-24292f?style=flat-square&logo=github&logoColor=white" alt="vridhira-backend" /></a> | MedusaJS v2 backend — **COD**, **Razorpay queue**, **Shiprocket**, **Wishlist**, **Algolia** modules | 🔒 Private |
 
 > [!NOTE]
 > The storefront and backend are **decoupled via REST API**. You can run the storefront against any MedusaJS v2 backend — not just Vridhira's. This makes it easy to prototype with a vanilla Medusa instance before wiring up the custom modules.
@@ -343,18 +343,18 @@ vridhira-frontend/
 
 **Core Frameworks**
 
-- [MedusaJS Documentation](https://docs.medusajs.com) — The **commerce engine** powering Vridhira's backend
-- [Next.js Documentation](https://nextjs.org/docs) — **App Router**, RSC, SSR, and ISR guides
-- [Tailwind CSS Documentation](https://tailwindcss.com/docs) — Utility classes and theme customisation
+- <a href="https://docs.medusajs.com"><img src="https://img.shields.io/badge/MedusaJS-Documentation-7c3aed?style=flat-square" alt="MedusaJS Documentation" /></a> — The **commerce engine** powering Vridhira's backend
+- <a href="https://nextjs.org/docs"><img src="https://img.shields.io/badge/Next.js-Documentation-000000?style=flat-square&logo=nextdotjs&logoColor=white" alt="Next.js Documentation" /></a> — **App Router**, RSC, SSR, and ISR guides
+- <a href="https://tailwindcss.com/docs"><img src="https://img.shields.io/badge/Tailwind_CSS-Documentation-06B6D4?style=flat-square&logo=tailwindcss&logoColor=white" alt="Tailwind CSS Documentation" /></a> — Utility classes and theme customisation
 
 **Indian Integrations**
 
-- [Razorpay Integration Docs](https://razorpay.com/docs) — Payment methods, webhooks, and test mode setup
-- [Shiprocket API Docs](https://apidocs.shiprocket.in) — Fulfillment, AWB generation, and tracking webhooks
-- [Algolia InstantSearch Docs](https://www.algolia.com/doc/guides/building-search-ui/what-is-instantsearch/react) — Connecting Algolia to your React/Next.js UI
+- <a href="https://razorpay.com/docs"><img src="https://img.shields.io/badge/Razorpay-Integration_Docs-2196F3?style=flat-square" alt="Razorpay Docs" /></a> — Payment methods, webhooks, and test mode setup
+- <a href="https://apidocs.shiprocket.in"><img src="https://img.shields.io/badge/Shiprocket-API_Docs-FF6B00?style=flat-square" alt="Shiprocket API Docs" /></a> — Fulfillment, AWB generation, and tracking webhooks
+- <a href="https://www.algolia.com/doc/guides/building-search-ui/what-is-instantsearch/react"><img src="https://img.shields.io/badge/Algolia-InstantSearch_Docs-003DFF?style=flat-square&logo=algolia&logoColor=white" alt="Algolia InstantSearch Docs" /></a> — Connecting Algolia to your React/Next.js UI
 
 > [!TIP]
-> Medusa provides a **[Storefront Development Guide](https://docs.medusajs.com/storefront-development)** that explains exactly which API endpoints Vridhira's `src/lib/data/` calls map to. Read it if you're extending or debugging data-fetching logic.
+> Medusa provides a **Storefront Development Guide** at `docs.medusajs.com/storefront-development` that explains exactly which API endpoints Vridhira's `src/lib/data/` calls map to. Read it if you're extending or debugging data-fetching logic.
 
 ---
 
@@ -364,7 +364,7 @@ Contributions are welcome — from fixing a typo in the README to building new f
 
 **Steps to contribute**
 
-1. **[Fork](https://github.com/Newbie-Himanshu/vridhira-frontend/fork)** the repository
+1. <a href="https://github.com/Newbie-Himanshu/vridhira-frontend/fork"><img src="https://img.shields.io/badge/Fork-this_repo-8B4513?style=flat-square&logo=github&logoColor=white" alt="Fork" /></a> the repository
 2. **Create a branch** — use a descriptive name: `feat/product-reviews` or `fix/cart-quantity-bug`
 3. **Make focused changes** — one concern per PR keeps reviews fast
 4. **Commit** using [Conventional Commits](https://www.conventionalcommits.org):
@@ -394,11 +394,11 @@ Vridhira is built on the shoulders of these excellent open-source projects:
 
 | Project | Role in Vridhira | License |
 |:---|:---|:---:|
-| [MedusaJS](https://github.com/medusajs/medusa) | **Commerce engine** — orders, products, regions, payments | MIT |
-| [Next.js](https://github.com/vercel/next.js) | **React framework** — App Router, SSR, image optimisation | MIT |
-| [Tailwind CSS](https://github.com/tailwindlabs/tailwindcss) | **Styling system** — design tokens, responsive utilities | MIT |
-| [Razorpay](https://razorpay.com) | **Payment infrastructure** — UPI, cards, COD flows | Commercial |
-| [Shiprocket](https://shiprocket.in) | **Logistics infrastructure** — D2C fulfillment & tracking | Commercial |
+| <a href="https://github.com/medusajs/medusa"><img src="https://img.shields.io/badge/MedusaJS-github-7c3aed?style=flat-square&logo=github&logoColor=white" alt="MedusaJS" /></a> | **Commerce engine** — orders, products, regions, payments | MIT |
+| <a href="https://github.com/vercel/next.js"><img src="https://img.shields.io/badge/Next.js-github-000000?style=flat-square&logo=github&logoColor=white" alt="Next.js" /></a> | **React framework** — App Router, SSR, image optimisation | MIT |
+| <a href="https://github.com/tailwindlabs/tailwindcss"><img src="https://img.shields.io/badge/Tailwind_CSS-github-06B6D4?style=flat-square&logo=github&logoColor=white" alt="Tailwind CSS" /></a> | **Styling system** — design tokens, responsive utilities | MIT |
+| <a href="https://razorpay.com"><img src="https://img.shields.io/badge/Razorpay-website-2196F3?style=flat-square" alt="Razorpay" /></a> | **Payment infrastructure** — UPI, cards, COD flows | Commercial |
+| <a href="https://shiprocket.in"><img src="https://img.shields.io/badge/Shiprocket-website-FF6B00?style=flat-square" alt="Shiprocket" /></a> | **Logistics infrastructure** — D2C fulfillment & tracking | Commercial |
 
 ---
 
@@ -436,4 +436,4 @@ Built with ❤️ for India's artisans by **Himanshu** — independently, withou
   </a>
 </p>
 
-<sub>Powered by <a href="https://github.com/medusajs/medusa">MedusaJS</a> — licensed separately under the MIT License by Medusa, Inc.</sub>
+<sub>Powered by <a href="https://github.com/medusajs/medusa"><img src="https://img.shields.io/badge/MedusaJS-medusajs%2Fmedusa-7c3aed?style=flat-square&logo=github&logoColor=white" alt="MedusaJS" /></a> — licensed separately under the MIT License by Medusa, Inc.</sub>
