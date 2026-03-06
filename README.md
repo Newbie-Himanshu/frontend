@@ -114,6 +114,9 @@ This is the **customer-facing storefront**. It connects to the **Vridhira Backen
 > [!IMPORTANT]
 > This repository is the **storefront only**. You also need the Vridhira Backend running to serve data. Both repos must be set up together for a working store. See [Related Repositories](#-related-repositories).
 
+> [!NOTE]
+> Vridhira is an **actively developed** project. Some features — Algolia search, Wishlist, and Google OAuth — are fully built in the backend but the storefront UI for these is still being migrated. The project is **not yet production-ready**. Track progress in the [GitHub issues](https://github.com/Newbie-Himanshu/vridhira-frontend/issues).
+
 ---
 
 ## ✨ Features
@@ -168,6 +171,9 @@ Vridhira is **not** a generic global storefront with INR added as an afterthough
 | 🏘️ **Artisan-Focused UX** | Small-seller UX — **not** enterprise admin panels. Made for real craft businesses |
 | 🔒 **Secure & Self-Hosted** | **Your data, your server, your control.** Zero SaaS lock-in |
 
+> [!WARNING]
+> Razorpay **live keys** require completed KYC and business activation on your Razorpay Dashboard. Test keys (`rzp_test_`) work without KYC. Do **not** use test keys in production — orders will appear successful but no money moves.
+
 > [!TIP]
 > Enabling **UPI** on Razorpay takes under 5 minutes after KYC. It is the single highest-converting payment option for Indian shoppers — don't skip it.
 
@@ -185,6 +191,9 @@ Vridhira is **not** a generic global storefront with INR added as an afterthough
 | **Node.js** | >= 20 | Use [nvm](https://github.com/nvm-sh/nvm) to manage versions |
 | **Yarn** | >= 1.22 | `npm install -g yarn` |
 | **Vridhira Backend** | Running at `:9000` | See [Related Repositories](#-related-repositories) |
+
+> [!NOTE]
+> A `.env.template` file is already included in the repo with all variable names and placeholder descriptions. Copy it to `.env.local` — never rename or edit `.env.template` itself, it's committed to the repo as a reference for contributors.
 
 > [!TIP]
 > On **Windows**, use [nvm-windows](https://github.com/coreybutler/nvm-windows) instead of nvm. Run your terminal as Administrator when installing global packages.
@@ -281,6 +290,9 @@ Copy `.env.template` to `.env.local` and fill in your values:
 | Search | <a href="https://www.algolia.com"><img src="https://img.shields.io/badge/Algolia-search-003DFF?style=flat-square&logo=algolia&logoColor=white" alt="Algolia" /></a> | **Sub-50ms** instant search with relevance tuning and facets |
 | Package Manager | <a href="https://yarnpkg.com"><img src="https://img.shields.io/badge/Yarn-v4-2C8EBB?style=flat-square&logo=yarn&logoColor=white" alt="Yarn" /></a> | Fast, **deterministic** installs with lockfile consistency |
 
+> [!IMPORTANT]
+> The `v0-boty-e-commerce-template/` folder in this monorepo is a **read-only visual reference** — it uses `shadcn/ui` which is **not** installed in the Vridhira storefront. When adapting components from it, re-implement the UI using Tailwind and existing module patterns. Never copy-paste its code directly.
+
 > [!TIP]
 > **MedusaJS v2** ships with a modular architecture — you can swap or extend individual modules (payments, inventory, fulfillment) without touching others. Vridhira uses this to plug in Razorpay and Shiprocket as first-class modules.
 
@@ -321,6 +333,9 @@ vridhira-frontend/
 ├── tailwind.config.js                  ← Brand colours & font family tokens
 └── tsconfig.json                       ← TypeScript config (es2017, bundler)
 ```
+
+> [!WARNING]
+> Functions inside `src/lib/data/` are **server-only**. They use the Medusa JS SDK with a secure token and must never be imported into `"use client"` components. If you need data in a client component, fetch it in a Server Component parent and pass it down as props.
 
 > [!TIP]
 > Each feature in `src/modules/` is **self-contained** — components, hooks, and server actions live together. If you're adding a new feature (e.g. reviews, loyalty points), create a new module folder rather than scattering files across the tree.
@@ -383,6 +398,9 @@ yarn lint           # ESLint — no warnings on changed files
 > [!TIP]
 > **Small PRs merge faster.** If your change touches more than 3 files or 150 lines, consider splitting it. Reviewers are human — focused diffs get reviewed same-day.
 
+> [!NOTE]
+> Vridhira uses **Conventional Commits** — your PR title and commit messages must follow the pattern. PRs with messages like `update stuff` or `fix` will be asked to rebase with proper messages before merging.
+
 > [!IMPORTANT]
 > **Do not commit `.env.local`**, API keys, secrets, or any credentials. If you accidentally commit a secret, rotate it immediately — don't just delete the file in a follow-up commit (the secret is still in git history).
 
@@ -410,6 +428,9 @@ Copyright © 2026 **Himanshu — Vridhira**. All rights reserved.
 
 > [!NOTE]
 > You are **free to fork, self-host, modify, and use commercially** — but you **must** publicly credit Vridhira and Himanshu in your README and keep the storefront credits visible. Removing attribution is a license violation. See [LICENSE](./LICENSE) for exact conditions.
+
+> [!IMPORTANT]
+> **v2.0 introduces a one-time cure rule.** If you violate the license and cure within 14 days, rights are reinstated — but **only once per licensee**. A second violation is permanent termination with no reinstatement path.
 
 > [!WARNING]
 > This is **not standard MIT**. It is a custom attribution-required license. If you fork this project, read [LICENSE](./LICENSE) before deploying publicly.
