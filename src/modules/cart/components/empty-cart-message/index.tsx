@@ -4,19 +4,18 @@ import InteractiveLink from "@modules/common/components/interactive-link"
 
 const EmptyCartMessage = () => {
   return (
-    <div className="py-48 px-2 flex flex-col justify-center items-start" data-testid="empty-cart-message">
+    <div className="flex flex-col justify-center items-center text-center space-y-6" data-testid="empty-cart-message">
       <Heading
         level="h1"
-        className="flex flex-row text-3xl-regular gap-x-2 items-baseline"
+        className="font-serif text-4xl font-semibold text-[#2C1810]"
       >
-        Cart
+        Your Basket is Empty
       </Heading>
-      <Text className="text-base-regular mt-4 mb-6 max-w-[32rem]">
-        You don&apos;t have anything in your cart. Let&apos;s change that, use
-        the link below to start browsing our products.
+      <Text className="text-[#8D6E63] text-base max-w-md mx-auto leading-relaxed">
+        Let&apos;s discover some beautiful handcrafted pieces. Explore our artisan collections to find something special.
       </Text>
-      <div>
-        <InteractiveLink href="/store">Explore products</InteractiveLink>
+      <div className="pt-4">
+        <InteractiveLink href="/store">Explore the Shop</InteractiveLink>
       </div>
     </div>
   )

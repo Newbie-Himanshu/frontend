@@ -1,6 +1,6 @@
 import repeat from "@lib/util/repeat"
 import { HttpTypes } from "@medusajs/types"
-import { Heading, Table } from "@medusajs/ui"
+import { Heading } from "@medusajs/ui"
 
 import Item from "@modules/cart/components/item"
 import SkeletonLineItem from "@modules/skeletons/components/skeleton-line-item"
@@ -13,24 +13,25 @@ const ItemsTemplate = ({ cart }: ItemsTemplateProps) => {
   const items = cart?.items
   return (
     <div>
-      <div className="pb-3 flex items-center">
-        <Heading className="text-[2rem] leading-[2.75rem]">Cart</Heading>
+      <div className="pb-6 flex items-center border-b border-ui-border-base mb-4" style={{ borderColor: "#E8DDD4" }}>
+        <Heading className="font-serif text-3xl font-semibold text-[#2C1810]">
+          Your Basket
+        </Heading>
       </div>
-      <Table>
-        <Table.Header className="border-t-0">
-          <Table.Row className="text-ui-fg-subtle txt-medium-plus">
-            <Table.HeaderCell className="!pl-0">Item</Table.HeaderCell>
-            <Table.HeaderCell></Table.HeaderCell>
-            <Table.HeaderCell>Quantity</Table.HeaderCell>
-            <Table.HeaderCell className="hidden small:table-cell">
-              Price
-            </Table.HeaderCell>
-            <Table.HeaderCell className="!pr-0 text-right">
-              Total
-            </Table.HeaderCell>
-          </Table.Row>
-        </Table.Header>
-        <Table.Body>
+      <table className="w-full border-collapse">
+        <thead className="border-b border-[#E8DDD4]">
+          <tr className="text-xs font-bold tracking-[0.1em] uppercase text-[#C9762B]">
+            <th className="text-left pb-4 pl-0 pr-4 font-bold">ITEM</th>
+            <th className="text-left pb-4 px-4 font-bold">QUANTITY</th>
+            <th className="hidden small:table-cell text-left pb-4 px-4 font-bold">
+              PRICE
+            </th>
+            <th className="text-right pb-4 pl-4 pr-0 font-bold">
+              TOTAL
+            </th>
+          </tr>
+        </thead>
+        <tbody>
           {items
             ? items
                 .sort((a, b) => {
@@ -48,8 +49,8 @@ const ItemsTemplate = ({ cart }: ItemsTemplateProps) => {
             : repeat(5).map((i) => {
                 return <SkeletonLineItem key={i} />
               })}
-        </Table.Body>
-      </Table>
+        </tbody>
+      </table>
     </div>
   )
 }
