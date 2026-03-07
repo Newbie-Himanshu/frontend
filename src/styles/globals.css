@@ -5,19 +5,29 @@
  * @author      Himanshu
  * @github      https://github.com/Newbie-Himanshu
  * @repo        https://github.com/Newbie-Himanshu/vridhira-frontend
- * @copyright   2026 Himanshu — Vridhira. All rights reserved.
- * @license     MIT
+ * @copyright   2026 Himanshu. All rights reserved.
+ * @license     SEE LICENSE IN LICENSE
  * ------------------------------------------------------------
  * @lastModifiedBy  Himanshu
- * @modifiedWith    GitHub Copilot
+ * @modifiedWith    Antigravity
  * @modifiedOn      2026-03-06
- * @changeNote      Added Vridhira credit block
+ * @changeNote      Added Vridhira base CSS layer — warm body background (#FAF7F2), default font and text color
  * ============================================================
  */
 
 @import "tailwindcss/base";
 @import "tailwindcss/components";
 @import "tailwindcss/utilities";
+
+@layer base {
+  body {
+    background-color: #FAF7F2; /* vridhira-background */
+    color: #2C1810;            /* vridhira-text */
+    font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+    min-height: 100dvh;
+  }
+}
+
 
 @layer utilities {
   /* Chrome, Safari and Opera */

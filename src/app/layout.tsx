@@ -17,8 +17,8 @@
 
 import { getBaseURL } from "@lib/util/env"
 import { Metadata } from "next"
-import { Plus_Jakarta_Sans, Playfair_Display, Tiro_Devanagari_Hindi } from "next/font/google"
-import "styles/globals.css"
+import { Plus_Jakarta_Sans, Playfair_Display, Tiro_Devanagari_Hindi, DM_Sans } from "next/font/google"
+import "../styles/globals.css"
 
 const plusJakartaSans = Plus_Jakarta_Sans({
   subsets: ["latin"],
@@ -39,6 +39,12 @@ const tiroDevanagariHindi = Tiro_Devanagari_Hindi({
   display: "swap",
 })
 
+const dmSans = DM_Sans({
+  subsets: ["latin"],
+  variable: "--font-dm",
+  display: "swap",
+})
+
 export const metadata: Metadata = {
   metadataBase: new URL(getBaseURL()),
   title: "Vridhira — E-Commerce for Indian Artisans",
@@ -51,7 +57,7 @@ export default function RootLayout(props: { children: React.ReactNode }) {
     <html
       lang="en"
       data-mode="light"
-      className={`${plusJakartaSans.variable} ${playfairDisplay.variable} ${tiroDevanagariHindi.variable}`}
+      className={`${plusJakartaSans.variable} ${playfairDisplay.variable} ${tiroDevanagariHindi.variable} ${dmSans.variable}`}
     >
       <body>
         <main className="relative">{props.children}</main>

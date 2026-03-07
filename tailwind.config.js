@@ -95,9 +95,10 @@ module.exports = {
         "3xl": "2rem",
       },
       fontFamily: {
-        sans:  ["'Plus Jakarta Sans'", "-apple-system", "BlinkMacSystemFont", "sans-serif"],
-        serif: ["'Playfair Display'", "Georgia", "serif"],
-        hindi: ["'Tiro Devanagari Hindi'", "serif"],
+        sans:   ["'Plus Jakarta Sans'", "-apple-system", "BlinkMacSystemFont", "sans-serif"],
+        serif:  ["'Playfair Display'", "Georgia", "serif"],
+        hindi:  ["'Tiro Devanagari Hindi'", "serif"],
+        dm:     ["var(--font-dm)", "'DM Sans'", "sans-serif"],
       },
       keyframes: {
         ring: {
@@ -169,6 +170,10 @@ module.exports = {
           "0%": { transform: "translateY(-100%)" },
           "100%": { transform: "translateY(0)" },
         },
+      },
+      transitionTimingFunction: {
+        // Quintic ease-out — the same luxurious deceleration as the reference navbar
+        quint: "cubic-bezier(0.22, 1, 0.36, 1)",
       },
       animation: {
         ring: "ring 2.2s cubic-bezier(0.5, 0, 0.5, 1) infinite",
