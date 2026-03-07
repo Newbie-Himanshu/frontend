@@ -37,30 +37,37 @@ const NativeSelect = forwardRef<HTMLSelectElement, NativeSelectProps>(
     }, [innerRef.current?.value])
 
     return (
-      <div>
-        <div
-          onFocus={() => innerRef.current?.focus()}
-          onBlur={() => innerRef.current?.blur()}
-          className={clx(
-            "relative flex items-center text-base-regular border border-ui-border-base bg-ui-bg-subtle rounded-md hover:bg-ui-bg-field-hover",
-            className,
-            {
-              "text-ui-fg-muted": isPlaceholder,
-            }
-          )}
-        >
+      <div className="flex flex-col w-full">
+        <div className="flex relative z-0 w-full">
           <select
             ref={innerRef}
-            defaultValue={defaultValue}
             {...props}
-            className="appearance-none flex-1 bg-transparent border-none px-4 py-2.5 transition-colors duration-150 outline-none "
+            className={clx(
+              "pt-4 pb-1 block w-full h-14 px-4 mt-0 bg-white border border-[#E8DDD4] rounded-xl appearance-none focus:outline-none focus:border-[#C9762B] focus:ring-1 focus:ring-[#C9762B] transition-all text-[#2C1810] z-10",
+              className,
+              {
+                "text-transparent": isPlaceholder, // hide text if placeholder so custom label shows
+              }
+            )}
+            onFocus={() => innerRef.current?.focus()}
+            onBlur={() => innerRef.current?.blur()}
           >
-            <option disabled value="">
-              {placeholder}
-            </option>
+            <option value="" disabled hidden></option>
             {children}
           </select>
-          <span className="absolute right-4 inset-y-0 flex items-center pointer-events-none ">
+          <label
+            className={clx(
+              "flex items-center justify-center mx-3 px-1 transition-all absolute duration-300 pointer-events-none z-20",
+              {
+                "top-4 text-[#8D6E63]": isPlaceholder,
+                "top-1.5 text-xs text-[#8D6E63]": !isPlaceholder,
+              }
+            )}
+          >
+            {placeholder}
+            {props.required && <span className="text-[#C9762B] ml-1">*</span>}
+          </label>
+          <span className="absolute right-4 inset-y-0 flex items-center pointer-events-none text-[#8D6E63] z-20">
             <ChevronUpDown />
           </span>
         </div>
