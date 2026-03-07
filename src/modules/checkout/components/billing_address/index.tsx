@@ -2,6 +2,13 @@ import { HttpTypes } from "@medusajs/types"
 import Input from "@modules/common/components/input"
 import React, { useState } from "react"
 import CountrySelect from "../country-select"
+import StateSelect from "../state-select"
+
+// Utility to validate Indian PIN codes (must be exactly 6 digits)
+const validatePincode = (pincode: string) => {
+  const pinRegex = /^[1-9][0-9]{5}$/
+  return pinRegex.test(pincode)
+}
 
 const BillingAddress = ({ cart }: { cart: HttpTypes.StoreCart | null }) => {
   const [formData, setFormData] = useState<any>({
@@ -21,10 +28,22 @@ const BillingAddress = ({ cart }: { cart: HttpTypes.StoreCart | null }) => {
       HTMLInputElement | HTMLInputElement | HTMLSelectElement
     >
   ) => {
-    setFormData({
-      ...formData,
-      [e.target.name]: e.target.value,
-    })
+    const { name, value } = e.target
+
+    // Add pincode validation logic
+    if (name === "billing_address.postal_code") {
+      // Only allow numbers and max 6 characters
+      const numericValue = value.replace(/\D/g, '').slice(0, 6)
+      setFormData({
+        ...formData,
+        [name]: numericValue,
+      })
+    } else {
+      setFormData({
+        ...formData,
+        [name]: value,
+      })
+    }
   }
 
   return (
@@ -72,6 +91,9 @@ const BillingAddress = ({ cart }: { cart: HttpTypes.StoreCart | null }) => {
           value={formData["billing_address.postal_code"]}
           onChange={handleChange}
           required
+          maxLength={6}
+          pattern="^[1-9][0-9]{5}$"
+          title="Please enter a valid 6-digit Indian PIN code."
           data-testid="billing-postal-input"
         />
         <Input
@@ -90,14 +112,25 @@ const BillingAddress = ({ cart }: { cart: HttpTypes.StoreCart | null }) => {
           required
           data-testid="billing-country-select"
         />
-        <Input
-          label="State / Province"
-          name="billing_address.province"
-          autoComplete="address-level1"
-          value={formData["billing_address.province"]}
-          onChange={handleChange}
-          data-testid="billing-province-input"
-        />
+        {formData["billing_address.country_code"] === "in" || !formData["billing_address.country_code"] ? (
+          <StateSelect
+            name="billing_address.province"
+            autoComplete="address-level1"
+            value={formData["billing_address.province"]}
+            onChange={(e: any) => setFormData({ ...formData, [e.target.name]: e.target.value })}
+            required
+            data-testid="billing-province-select"
+          />
+        ) : (
+          <Input
+            label="State / Province"
+            name="billing_address.province"
+            autoComplete="address-level1"
+            value={formData["billing_address.province"]}
+            onChange={handleChange}
+            data-testid="billing-province-input"
+          />
+        )}
         <Input
           label="Phone"
           name="billing_address.phone"

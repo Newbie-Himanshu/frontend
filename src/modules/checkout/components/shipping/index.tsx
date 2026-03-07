@@ -149,12 +149,20 @@ const Shipping: React.FC<ShippingProps> = ({
   }, [isOpen])
 
   return (
-    <div className="bg-white">
+    <div 
+      className="w-full flex flex-col rounded-3xl p-8 lg:p-10 text-[#2C1810] transition-colors"
+      style={{ 
+        background: "rgba(255, 255, 255, 0.6)", 
+        backdropFilter: "blur(20px)", 
+        border: "1px solid rgba(232, 221, 212, 0.8)",
+        boxShadow: "0 12px 40px rgba(139, 69, 19, 0.08)"
+      }}
+    >
       <div className="flex flex-row items-center justify-between mb-6">
         <Heading
           level="h2"
           className={clx(
-            "flex flex-row text-3xl-regular gap-x-2 items-baseline",
+            "flex flex-row font-serif text-3xl font-semibold gap-x-2 items-baseline",
             {
               "opacity-50 pointer-events-none select-none":
                 !isOpen && cart.shipping_methods?.length === 0,
@@ -173,7 +181,7 @@ const Shipping: React.FC<ShippingProps> = ({
             <Text>
               <button
                 onClick={handleEdit}
-                className="text-ui-fg-interactive hover:text-ui-fg-interactive-hover"
+                className="text-sm font-semibold text-[#8D6E63] hover:text-[#C9762B] transition-colors"
                 data-testid="edit-delivery-button"
               >
                 Edit
@@ -211,10 +219,10 @@ const Shipping: React.FC<ShippingProps> = ({
                       value={PICKUP_OPTION_ON}
                       data-testid="delivery-option-radio"
                       className={clx(
-                        "flex items-center justify-between text-small-regular cursor-pointer py-4 border rounded-rounded px-8 mb-2 hover:shadow-borders-interactive-with-active",
+                        "flex items-center justify-between text-sm cursor-pointer py-4 border rounded-xl px-8 mb-2 transition-colors",
                         {
-                          "border-ui-border-interactive":
-                            showPickupOptions === PICKUP_OPTION_ON,
+                          "border-[#C9762B] bg-[#FAF7F2]": showPickupOptions === PICKUP_OPTION_ON,
+                          "border-[#E8DDD4] hover:border-[#C9762B]": showPickupOptions !== PICKUP_OPTION_ON,
                         }
                       )}
                     >
@@ -253,12 +261,11 @@ const Shipping: React.FC<ShippingProps> = ({
                         data-testid="delivery-option-radio"
                         disabled={isDisabled}
                         className={clx(
-                          "flex items-center justify-between text-small-regular cursor-pointer py-4 border rounded-rounded px-8 mb-2 hover:shadow-borders-interactive-with-active",
+                          "flex items-center justify-between text-sm cursor-pointer py-4 border rounded-xl px-8 mb-2 transition-colors",
                           {
-                            "border-ui-border-interactive":
-                              option.id === shippingMethodId,
-                            "hover:shadow-brders-none cursor-not-allowed":
-                              isDisabled,
+                            "border-[#C9762B] bg-[#FAF7F2]": option.id === shippingMethodId,
+                            "border-[#E8DDD4] hover:border-[#C9762B]": option.id !== shippingMethodId && !isDisabled,
+                            "opacity-50 cursor-not-allowed border-[#E8DDD4]": isDisabled,
                           }
                         )}
                       >
@@ -323,12 +330,11 @@ const Shipping: React.FC<ShippingProps> = ({
                           disabled={option.insufficient_inventory}
                           data-testid="delivery-option-radio"
                           className={clx(
-                            "flex items-center justify-between text-small-regular cursor-pointer py-4 border rounded-rounded px-8 mb-2 hover:shadow-borders-interactive-with-active",
+                            "flex items-center justify-between text-sm cursor-pointer py-4 border rounded-xl px-8 mb-2 transition-colors",
                             {
-                              "border-ui-border-interactive":
-                                option.id === shippingMethodId,
-                              "hover:shadow-brders-none cursor-not-allowed":
-                                option.insufficient_inventory,
+                              "border-[#C9762B] bg-[#FAF7F2]": option.id === shippingMethodId,
+                              "border-[#E8DDD4] hover:border-[#C9762B]": option.id !== shippingMethodId && !option.insufficient_inventory,
+                              "opacity-50 cursor-not-allowed border-[#E8DDD4]": option.insufficient_inventory,
                             }
                           )}
                         >
@@ -370,7 +376,7 @@ const Shipping: React.FC<ShippingProps> = ({
             />
             <Button
               size="large"
-              className="mt"
+              className="mt-6 bg-[#C9762B] hover:bg-[#A65D1F] text-white rounded-xl h-12 w-full sm:w-auto px-8"
               onClick={handleSubmit}
               isLoading={isLoading}
               disabled={!cart.shipping_methods?.[0]}
@@ -384,11 +390,11 @@ const Shipping: React.FC<ShippingProps> = ({
         <div>
           <div className="text-small-regular">
             {cart && (cart.shipping_methods?.length ?? 0) > 0 && (
-              <div className="flex flex-col w-1/3">
-                <Text className="txt-medium-plus text-ui-fg-base mb-1">
+              <div className="flex flex-col w-1/3 text-sm">
+                <Text className="text-base font-bold text-[#2C1810] mb-2">
                   Method
                 </Text>
-                <Text className="txt-medium text-ui-fg-subtle">
+                <Text className="text-[#8D6E63] leading-relaxed">
                   {cart.shipping_methods!.at(-1)!.name}{" "}
                   {convertToLocale({
                     amount: cart.shipping_methods!.at(-1)!.amount!,
@@ -400,7 +406,7 @@ const Shipping: React.FC<ShippingProps> = ({
           </div>
         </div>
       )}
-      <Divider className="mt-8" />
+      {/* Divider removed as frosted cards stack with clean gaps instead */}
     </div>
   )
 }

@@ -17,7 +17,6 @@ type DiscountCodeProps = {
 }
 
 const DiscountCode: React.FC<DiscountCodeProps> = ({ cart }) => {
-  const [isOpen, setIsOpen] = React.useState(false)
   const [errorMessage, setErrorMessage] = React.useState("")
 
   const { promotions = [] } = cart
@@ -56,37 +55,23 @@ const DiscountCode: React.FC<DiscountCodeProps> = ({ cart }) => {
   }
 
   return (
-    <div className="w-full bg-white flex flex-col">
-      <div className="txt-medium">
+    <div className="w-full bg-transparent flex flex-col">
+      <div className="text-sm">
         <form action={(a) => addPromotionCode(a)} className="w-full mb-5">
-          <Label className="flex gap-x-1 my-2 items-center">
-            <button
-              onClick={() => setIsOpen(!isOpen)}
-              type="button"
-              className="txt-medium text-ui-fg-interactive hover:text-ui-fg-interactive-hover"
-              data-testid="add-discount-button"
-            >
-              Add Promotion Code(s)
-            </button>
-
-            {/* <Tooltip content="You can add multiple promotion codes">
-              <InformationCircleSolid color="var(--fg-muted)" />
-            </Tooltip> */}
-          </Label>
-
-          {isOpen && (
             <>
-              <div className="flex w-full gap-x-2">
+              <div className="flex w-full gap-x-2 mt-3 mb-2">
                 <Input
-                  className="size-full"
+                  className="w-full h-11 px-4 rounded-xl border border-[#E8DDD4] bg-[#FAF7F2]/50 text-[#2C1810] placeholder:text-[#8D6E63] focus-visible:ring-1 focus-visible:ring-[#C9762B]"
                   id="promotion-input"
                   name="code"
                   type="text"
                   autoFocus={false}
                   data-testid="discount-input"
+                  placeholder="Enter promo code"
                 />
                 <SubmitButton
                   variant="secondary"
+                  className="h-11 px-6 rounded-xl font-bold tracking-wider text-xs uppercase text-[#C9762B] border-1.5 border-[#C9762B] hover:bg-[#C9762B]/5 transition-colors"
                   data-testid="discount-apply-button"
                 >
                   Apply
@@ -98,13 +83,12 @@ const DiscountCode: React.FC<DiscountCodeProps> = ({ cart }) => {
                 data-testid="discount-error-message"
               />
             </>
-          )}
         </form>
 
         {promotions.length > 0 && (
           <div className="w-full flex items-center">
             <div className="flex flex-col w-full">
-              <Heading className="txt-medium mb-2">
+              <Heading className="text-sm font-semibold text-[#8D6E63] mb-3">
                 Promotion(s) applied:
               </Heading>
 

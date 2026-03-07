@@ -6,6 +6,13 @@ import { mapKeys } from "lodash"
 import React, { useEffect, useMemo, useState } from "react"
 import AddressSelect from "../address-select"
 import CountrySelect from "../country-select"
+import StateSelect from "../state-select"
+
+// Utility to validate Indian PIN codes (must be exactly 6 digits)
+const validatePincode = (pincode: string) => {
+  const pinRegex = /^[1-9][0-9]{5}$/
+  return pinRegex.test(pincode)
+}
 
 const ShippingAddress = ({
   customer,
@@ -86,17 +93,32 @@ const ShippingAddress = ({
       HTMLInputElement | HTMLInputElement | HTMLSelectElement
     >
   ) => {
-    setFormData({
-      ...formData,
-      [e.target.name]: e.target.value,
-    })
+    const { name, value } = e.target
+
+    // Add pincode validation logic
+    if (name === "shipping_address.postal_code") {
+      // Only allow numbers and max 6 characters
+      const numericValue = value.replace(/\D/g, '').slice(0, 6)
+      setFormData({
+        ...formData,
+        [name]: numericValue,
+      })
+      
+      // We could add visual validation here (e.g. error state) if it's less than 6 digits when out of focus, 
+      // but for now we'll just restrict input to 6 digits.
+    } else {
+      setFormData({
+        ...formData,
+        [name]: value,
+      })
+    }
   }
 
   return (
     <>
       {customer && (addressesInRegion?.length || 0) > 0 && (
-        <Container className="mb-6 flex flex-col gap-y-4 p-5">
-          <p className="text-small-regular">
+        <Container className="mb-6 flex flex-col gap-y-4 p-6 bg-[#FAF7F2] border border-[#E8DDD4] rounded-2xl shadow-sm">
+          <p className="text-base text-[#2C1810]">
             {`Hi ${customer.first_name}, do you want to use one of your saved addresses?`}
           </p>
           <AddressSelect
@@ -153,6 +175,9 @@ const ShippingAddress = ({
           value={formData["shipping_address.postal_code"]}
           onChange={handleChange}
           required
+          maxLength={6}
+          pattern="^[1-9][0-9]{5}$"
+          title="Please enter a valid 6-digit Indian PIN code."
           data-testid="shipping-postal-code-input"
         />
         <Input
@@ -173,14 +198,25 @@ const ShippingAddress = ({
           required
           data-testid="shipping-country-select"
         />
-        <Input
-          label="State / Province"
-          name="shipping_address.province"
-          autoComplete="address-level1"
-          value={formData["shipping_address.province"]}
-          onChange={handleChange}
-          data-testid="shipping-province-input"
-        />
+        {formData["shipping_address.country_code"] === "in" || !formData["shipping_address.country_code"] ? (
+          <StateSelect
+            name="shipping_address.province"
+            autoComplete="address-level1"
+            value={formData["shipping_address.province"]}
+            onChange={(e: any) => setFormData({ ...formData, [e.target.name]: e.target.value })}
+            required
+            data-testid="shipping-province-select"
+          />
+        ) : (
+          <Input
+            label="State / Province"
+            name="shipping_address.province"
+            autoComplete="address-level1"
+            value={formData["shipping_address.province"]}
+            onChange={handleChange}
+            data-testid="shipping-province-input"
+          />
+        )}
       </div>
       <div className="my-8">
         <Checkbox

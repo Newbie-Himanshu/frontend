@@ -34,6 +34,7 @@ const CountrySelect = forwardRef<
       ref={innerRef}
       placeholder={placeholder}
       defaultValue={defaultValue}
+      required={props.required}
       {...props}
     >
       {countryOptions?.map(({ value, label }, index) => (
