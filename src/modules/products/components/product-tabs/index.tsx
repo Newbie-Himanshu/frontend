@@ -5,6 +5,7 @@ import FastDelivery from "@modules/common/icons/fast-delivery"
 import Refresh from "@modules/common/icons/refresh"
 
 import Accordion from "./accordion"
+import PincodeChecker from "@modules/products/components/pincode-checker"
 import { HttpTypes } from "@medusajs/types"
 
 type ProductTabsProps = {
@@ -20,6 +21,10 @@ const ProductTabs = ({ product }: ProductTabsProps) => {
     {
       label: "Shipping & Returns",
       component: <ShippingInfoTab />,
+    },
+    {
+      label: "Check Delivery",
+      component: <PincodeChecker />,
     },
   ]
 
@@ -85,31 +90,36 @@ const ShippingInfoTab = () => {
         <div className="flex items-start gap-x-2">
           <FastDelivery />
           <div>
-            <span className="font-semibold">Fast delivery</span>
-            <p className="max-w-sm">
-              Your package will arrive in 3-5 business days at your pick up
-              location or in the comfort of your home.
+            <span className="font-semibold">Delivery</span>
+            <p className="max-w-sm text-gray-600">
+              Good things take a little time — your order is lovingly packed and
+              on its way within 2–4 days. Expect it at your door in 5–9 days,
+              with a tracking link so you can follow every step of the journey.
             </p>
           </div>
         </div>
         <div className="flex items-start gap-x-2">
           <Refresh />
           <div>
-            <span className="font-semibold">Simple exchanges</span>
-            <p className="max-w-sm">
-              Is the fit not quite right? No worries - we&apos;ll exchange your
-              product for a new one.
+            <span className="font-semibold">Returns & Exchanges</span>
+            <p className="max-w-sm text-gray-600">
+              Not quite what you pictured? We get it. Reach out within 7 days of
+              receiving your order and we&apos;ll make it right — as long as
+              the piece is untouched, unwashed, and still has its tags on. A
+              heads-up: sale items and custom pieces are final, as they were
+              made just for you.
             </p>
           </div>
         </div>
         <div className="flex items-start gap-x-2">
           <Back />
           <div>
-            <span className="font-semibold">Easy returns</span>
-            <p className="max-w-sm">
-              Just return your product and we&apos;ll refund your money. No
-              questions asked – we&apos;ll do our best to make sure your return
-              is hassle-free.
+            <span className="font-semibold">Refunds</span>
+            <p className="max-w-sm text-gray-600">
+              Once your return finds its way back to us, we&apos;ll take a
+              careful look and get your refund moving within 5–7 days — right
+              back to where it came from. If something was our mistake, we
+              cover the shipping too. No fuss.
             </p>
           </div>
         </div>

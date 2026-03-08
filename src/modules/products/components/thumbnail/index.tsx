@@ -41,7 +41,7 @@ const Thumbnail: React.FC<ThumbnailProps> = ({
       )}
       data-testid={dataTestid}
     >
-      <ImageOrPlaceholder image={initialImage} size={size} />
+      <ImageOrPlaceholder image={initialImage} size={size} priority={isFeatured} />
     </Container>
   )
 }
@@ -49,7 +49,8 @@ const Thumbnail: React.FC<ThumbnailProps> = ({
 const ImageOrPlaceholder = ({
   image,
   size,
-}: Pick<ThumbnailProps, "size"> & { image?: string }) => {
+  priority,
+}: Pick<ThumbnailProps, "size"> & { image?: string; priority?: boolean }) => {
   return image ? (
     <Image
       src={image}
@@ -59,6 +60,7 @@ const ImageOrPlaceholder = ({
       quality={50}
       sizes="(max-width: 576px) 280px, (max-width: 768px) 360px, (max-width: 992px) 480px, 800px"
       fill
+      priority={priority}
     />
   ) : (
     <div className="w-full h-full absolute inset-0 flex items-center justify-center">

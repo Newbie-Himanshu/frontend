@@ -1,12 +1,14 @@
 import { HttpTypes } from "@medusajs/types"
 import { Container } from "@medusajs/ui"
 import Image from "next/image"
+import React from "react"
 
 type ImageGalleryProps = {
   images: HttpTypes.StoreProductImage[]
+  firstImageOverlay?: React.ReactNode
 }
 
-const ImageGallery = ({ images }: ImageGalleryProps) => {
+const ImageGallery = ({ images, firstImageOverlay }: ImageGalleryProps) => {
   return (
     <div className="flex items-start relative">
       <div className="flex flex-col flex-1 small:mx-16 gap-y-4">
@@ -30,6 +32,7 @@ const ImageGallery = ({ images }: ImageGalleryProps) => {
                   }}
                 />
               )}
+              {index === 0 && firstImageOverlay}
             </Container>
           )
         })}
