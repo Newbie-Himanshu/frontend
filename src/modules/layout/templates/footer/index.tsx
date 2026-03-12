@@ -4,7 +4,7 @@
  * ============================================================
  * @author      Himanshu
  * @github      https://github.com/Newbie-Himanshu
- * @repo        https://github.com/Newbie-Himanshu/Himanshu-frontend
+ * @repo        https://github.com/Newbie-Himanshu/frontend
  * @copyright   2026 Himanshu. All rights reserved.
  * @license     SEE LICENSE IN LICENSE
  * ------------------------------------------------------------
@@ -52,7 +52,7 @@ const SOCIAL_LINKS = [
   { label: "Instagram", href: "https://www.instagram.com/Himanshu.in",                Icon: InstagramIcon },
   { label: "Facebook",  href: "https://facebook.com/profile.php?id=61584546327635",  Icon: FacebookIcon  },
   { label: "Threads",   href: "https://threads.net/Himanshu.in",                     Icon: ThreadsIcon   },
-  { label: "GitHub",    href: "https://github.com/Himanshu/Himanshu-frontend",       Icon: GitHubIcon    },
+  { label: "GitHub",    href: "https://github.com/Himanshu/frontend",       Icon: GitHubIcon    },
 ]
 
 export default async function Footer() {
@@ -182,7 +182,7 @@ export default async function Footer() {
                 className="underline underline-offset-2 hover:text-Himanshu-primary transition-colors"
                 style={{ color: "#8B4513" }}
               >
-                Himanshu — Himanshu
+                Himanshu
               </a>
               {" "}for Indian artisans.
             </p>

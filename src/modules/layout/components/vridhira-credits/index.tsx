@@ -4,8 +4,8 @@
  * ============================================================
  * @author      Himanshu
  * @github      https://github.com/Newbie-Himanshu
- * @repo        https://github.com/Newbie-Himanshu/Himanshu-frontend
- * @copyright   2026 Himanshu — Himanshu. All rights reserved.
+ * @repo        https://github.com/Newbie-Himanshu/frontend
+ * @copyright   2026 Himanshu. All rights reserved.
  * @license     MIT
  * ------------------------------------------------------------
  * @lastModifiedBy  Himanshu
@@ -50,8 +50,8 @@ const GitHubIcon = () => (
  */
 const FOOTER_LINKS: Array<{ label: string; href: string; Icon: React.FC }> = [
   {
-    label: "Himanshu-frontend",
-    href: "https://github.com/Himanshu/Himanshu-frontend",
+    label: "frontend",
+    href: "https://github.com/Himanshu/frontend",
     Icon: GitHubIcon,
   },
   // ← Future: LinkedIn, Twitter/X, Instagram go here
@@ -62,7 +62,7 @@ const FOOTER_LINKS: Array<{ label: string; href: string; Icon: React.FC }> = [
 /**
  * himanshuCredits
  *
- * Renders visible author credits for Himanshu — Himanshu in the storefront footer.
+ * Renders visible author credits for Himanshu in the storefront footer.
  * This is a Server Component — no client-side logic needed.
  *
  * Usage:
@@ -86,7 +86,7 @@ const himanshuCredits: React.FC<himanshuCreditsProps> = ({
           rel="noopener noreferrer"
           className="underline underline-offset-2 hover:text-Himanshu-primary transition-colors"
         >
-          Himanshu — Himanshu
+          Himanshu
         </a>
         {" "}for Indian artisans.
       </p>
@@ -111,7 +111,7 @@ const himanshuCredits: React.FC<himanshuCreditsProps> = ({
       <div className="flex flex-col items-center gap-3 text-center">
         {/* Name */}
         <p className="text-sm font-semibold text-Himanshu-text">
-          Himanshu — Himanshu
+          Himanshu
         </p>
 
         {/* Tagline */}
@@ -144,7 +144,7 @@ const himanshuCredits: React.FC<himanshuCreditsProps> = ({
 
         {/* Copyright */}
         <p className="text-xs text-Himanshu-muted mt-1">
-          © {new Date().getFullYear()} Himanshu — Himanshu. All rights reserved.
+          © {new Date().getFullYear()} Himanshu. All rights reserved.
         </p>
 
         {/* Framework acknowledgment */}
