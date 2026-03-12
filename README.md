@@ -84,6 +84,7 @@
 
 | # | Section | What's inside |
 |:---:|:---|:---|
+| 0 | [⚖️ Licensing](#%EF%B8%8F-licensing) | **Dual-License model — FREE for learning, PAID for commercial** |
 | 1 | [🛕 Overview](#-overview) | What Vridhira is and why it exists |
 | 2 | [✨ Features](#-features) | Full feature grid — commerce, payments, logistics, search |
 | 3 | [🇮🇳 India-First Commerce](#-india-first-commerce) | UPI, COD-OTP, INR/GST, Devanagari — built for India |
@@ -96,14 +97,70 @@
 | 10 | [📚 Resources](#-resources) | Official docs for every integration |
 | 11 | [🤝 Contributing](#-contributing) | How to fork, branch, commit, and PR |
 | 12 | [🙏 Acknowledgements](#-acknowledgements) | Open-source projects that power Vridhira |
-| 13 | [📜 License](#-license) | Vridhira Attribution License v2.0 — use freely, **always credit** |
+| 13 | [📜 License](#-license) | Vridhira Dual-License v2.0 — FREE for learning, PAID for commercial |
 | 14 | [👤 Author](#-author) | Built by Himanshu for India's artisans |
 
 </details>
 
 ---
 
-## 🛕 Overview
+## ⚖️ Licensing
+
+Vridhira uses a **DUAL-LICENSE model** to keep this project sustainable while remaining accessible to students and non-profits:
+
+### 👨‍🎓 **Community License (FREE)**
+For students, learners, and non-profit organizations
+
+✅ **No payment required** | ✅ **Full source access** | ✅ **Attribution only**
+
+Perfect for portfolios, coursework, open-source contributions, and non-profit use.
+
+**[👉 Read Community License](./COMMUNITY-LICENSE.md)**
+
+---
+
+### 💼 **Commercial License (PAID)**
+For businesses and revenue-generating deployments
+
+✅ **5-10% monthly royalty** (tiered by revenue) | ✅ **Monthly reporting** | ✅ **Production rights**
+
+If you deploy Vridhira to generate revenue (any amount), a Commercial License is required.
+
+**[👉 Read Commercial License](./COMMERCIAL-LICENSE.md) | [👉 Sign Agreement](./COMMERCIAL-LICENSE-AGREEMENT.md) | [👉 Payment Schedule](./PAYMENT-SCHEDULE.md)**
+
+---
+
+### 📚 **Quick License Guide**
+
+| You Are... | License | Cost | Details |
+|---|---|---|---|
+| Student/learner | Community | FREE | [Read](./COMMUNITY-LICENSE.md) |
+| Building for portfolio | Community | FREE | [Read](./COMMUNITY-LICENSE.md) |
+| Contributing to open-source | Community | FREE | [Read](./COMMUNITY-LICENSE.md) |
+| Running a business | Commercial | 5-10% monthly | [Read](./COMMERCIAL-LICENSE.md) |
+| Building for a paying client | Commercial | 5-10% monthly | [Read](./COMMERCIAL-LICENSE.md) |
+| Non-profit organization | Community | FREE | [Read](./COMMUNITY-LICENSE.md) |
+
+**Unsure which one you need?** → [👉 See Full Licensing Guide](./LICENSE-INDEX.md)
+
+---
+
+## 🚀 Quick Start for Licensing
+
+**Community License (No setup):**
+1. Build your project
+2. Keep attribution in README and code
+3. Deploy for non-commercial use
+4. Done! ✅
+
+**Commercial License (Setup required):**
+1. Read [COMMERCIAL-LICENSE.md](./COMMERCIAL-LICENSE.md)
+2. Email himanshu@example.com with company details
+3. Sign [COMMERCIAL-LICENSE-AGREEMENT.md](./COMMERCIAL-LICENSE-AGREEMENT.md)
+4. Setup monthly payment by 15th (use [PAYMENT-SCHEDULE.md](./PAYMENT-SCHEDULE.md))
+5. Deploy and scale! 🚀
+
+---
 
 **Vridhira** is an **open-source**, **India-first** e-commerce storefront designed for artisans, weavers, potters, and handcraft sellers — people whose work deserves a digital home built for **how India actually shops**.
 
@@ -507,7 +564,7 @@ Copyright © 2026 **Himanshu — Vridhira**. All rights reserved.
 | **What I build** | Full-stack e-commerce — payments, logistics, search, storefront |
 | **Stack** | Next.js · MedusaJS · TypeScript · Razorpay · Shiprocket · Algolia |
 | **Why Vridhira** | India has 7 crore+ artisans with no good open-source digital storefront built for how India shops |
-| **License** | [Vridhira Attribution License v2.0](./LICENSE) — free to use, always credit |
+| **License** | **[Dual-License v2.0](./LICENSE)** — [📚 Licensing Guide](./LICENSE-INDEX.md) · [👨‍🎓 Community](./COMMUNITY-LICENSE.md) · [💼 Commercial](./COMMERCIAL-LICENSE.md) · [💳 Payment](./PAYMENT-SCHEDULE.md) |
 
 > [!NOTE]
 > If you find this project useful — **star the repo**, share it with someone building for India, or open a PR. That's the best way to support independent open-source work.
