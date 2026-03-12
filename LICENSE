@@ -325,3 +325,49 @@ For detailed information:
 
 Questions? Contact: hk8913114@gmail.com
 GitHub: https://github.com/Newbie-Himanshu
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+ACKNOWLEDGMENT OF DEPENDENCIES
+
+This Software uses the following open-source projects and frameworks, each
+with its own separate license:
+
+**Commerce Engine:**
+  • MedusaJS (https://github.com/medusajs/medusa) — MIT License
+    E-commerce platform framework that powers the core commerce logic
+
+**Frontend Framework:**
+  • Next.js (https://github.com/vercel/next.js) — MIT License
+    React framework for production
+
+**UI & Styling:**
+  • React (https://github.com/facebook/react) — MIT License
+    JavaScript library for building user interfaces
+
+  • Tailwind CSS (https://github.com/tailwindlabs/tailwindcss) — MIT License
+    Utility-first CSS framework
+
+**Other Dependencies:**
+  • TypeScript (https://github.com/microsoft/TypeScript) — Apache 2.0 License
+    Typed superset of JavaScript
+
+  • Node.js (https://github.com/nodejs/node) — MIT License
+    JavaScript runtime environment
+
+**Search & Analytics:**
+  • Algolia (https://www.algolia.com) — Proprietary with free tier
+    Search and discovery platform
+
+  • Stripe/Razorpay SDKs — Respective proprietary licenses
+    Payment processing
+
+This Software acknowledges these and other open-source projects that make
+this possible. You MUST comply with all dependency licenses independently
+in addition to this License.
+
+For a complete list of dependencies and their licenses, see package.json
+and yarn.lock (or package-lock.json) in the repository.
+
+This License applies ONLY to Himanshu's original code. Dependency licenses
+remain under their respective terms and are not altered by this License.
