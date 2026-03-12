@@ -4,7 +4,7 @@
  * ============================================================
  * @author      Himanshu
  * @github      https://github.com/Newbie-Himanshu
- * @repo        https://github.com/Newbie-Himanshu/vridhira-frontend
+ * @repo        https://github.com/Newbie-Himanshu/frontend
  * @copyright   2026 Himanshu. All rights reserved.
  * @license     SEE LICENSE IN LICENSE
  * ------------------------------------------------------------
@@ -52,7 +52,7 @@ const SOCIAL_LINKS = [
   { label: "Instagram", href: "https://www.instagram.com/vridhira.in",                Icon: InstagramIcon },
   { label: "Facebook",  href: "https://facebook.com/profile.php?id=61584546327635",  Icon: FacebookIcon  },
   { label: "Threads",   href: "https://threads.net/vridhira.in",                     Icon: ThreadsIcon   },
-  { label: "GitHub",    href: "https://github.com/vridhira/vridhira-frontend",       Icon: GitHubIcon    },
+  { label: "GitHub",    href: "https://github.com/vridhira/frontend",       Icon: GitHubIcon    },
 ]
 
 export default async function Footer() {

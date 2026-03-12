@@ -4,7 +4,7 @@
  * ============================================================
  * @author      Himanshu
  * @github      https://github.com/Newbie-Himanshu
- * @repo        https://github.com/Newbie-Himanshu/vridhira-frontend
+ * @repo        https://github.com/Newbie-Himanshu/frontend
  * @copyright   2026 Himanshu — Vridhira. All rights reserved.
  * @license     MIT
  * ------------------------------------------------------------
@@ -50,8 +50,8 @@ const GitHubIcon = () => (
  */
 const FOOTER_LINKS: Array<{ label: string; href: string; Icon: React.FC }> = [
   {
-    label: "vridhira-frontend",
-    href: "https://github.com/vridhira/vridhira-frontend",
+    label: "frontend",
+    href: "https://github.com/vridhira/frontend",
     Icon: GitHubIcon,
   },
   // ← Future: LinkedIn, Twitter/X, Instagram go here
