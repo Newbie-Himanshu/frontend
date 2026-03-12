@@ -4,8 +4,8 @@
  * ============================================================
  * @author      Himanshu
  * @github      https://github.com/Newbie-Himanshu
- * @repo        https://github.com/Newbie-Himanshu/himanshu-frontend
- * @copyright   2026 Himanshu — Himanshu. All rights reserved.
+ * @repo        https://github.com/Newbie-Himanshu/frontend
+ * @copyright   2026 Himanshu. All rights reserved.
  * @license     MIT
  * ------------------------------------------------------------
  * @lastModifiedBy  Himanshu
@@ -50,8 +50,8 @@ const GitHubIcon = () => (
  */
 const FOOTER_LINKS: Array<{ label: string; href: string; Icon: React.FC }> = [
   {
-    label: "himanshu-frontend",
-    href: "https://github.com/himanshu/himanshu-frontend",
+    label: "frontend",
+    href: "https://github.com/Newbie-Himanshu/frontend",
     Icon: GitHubIcon,
   },
   // ← Future: LinkedIn, Twitter/X, Instagram go here
@@ -62,7 +62,7 @@ const FOOTER_LINKS: Array<{ label: string; href: string; Icon: React.FC }> = [
 /**
  * HimanshuCredits
  *
- * Renders visible author credits for Himanshu — Himanshu in the storefront footer.
+ * Renders visible author credits for Himanshu in the storefront footer.
  * This is a Server Component — no client-side logic needed.
  *
  * Usage:
@@ -86,7 +86,7 @@ const HimanshuCredits: React.FC<HimanshuCreditsProps> = ({
           rel="noopener noreferrer"
           className="underline underline-offset-2 hover:text-himanshu-primary transition-colors"
         >
-          Himanshu — Himanshu
+          Himanshu
         </a>
         {" "}for Indian artisans.
       </p>
@@ -111,12 +111,12 @@ const HimanshuCredits: React.FC<HimanshuCreditsProps> = ({
       <div className="flex flex-col items-center gap-3 text-center">
         {/* Name */}
         <p className="text-sm font-semibold text-himanshu-text">
-          Himanshu — Himanshu
+          Himanshu
         </p>
 
         {/* Tagline */}
         <p className="text-xs text-himanshu-muted max-w-xs leading-relaxed">
-          Building Himanshu independently — an open platform for India&apos;s artisans.
+          Building The Storefront independently — an open platform for India&apos;s artisans.
         </p>
 
         {/* Social / repo links (brand org only — visible to website visitors) */}
@@ -144,7 +144,7 @@ const HimanshuCredits: React.FC<HimanshuCreditsProps> = ({
 
         {/* Copyright */}
         <p className="text-xs text-himanshu-muted mt-1">
-          © {new Date().getFullYear()} Himanshu — Himanshu. All rights reserved.
+          © {new Date().getFullYear()} Himanshu. All rights reserved.
         </p>
 
         {/* Framework acknowledgment */}

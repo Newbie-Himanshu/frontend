@@ -4,7 +4,7 @@
  * ============================================================
  * @author      Himanshu
  * @github      https://github.com/Newbie-Himanshu
- * @repo        https://github.com/Newbie-Himanshu/himanshu-frontend
+ * @repo        https://github.com/Newbie-Himanshu/frontend
  * @copyright   2026 Himanshu. All rights reserved.
  * @license     SEE LICENSE IN LICENSE
  * ------------------------------------------------------------
