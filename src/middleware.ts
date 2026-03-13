@@ -112,7 +112,22 @@ export async function middleware(request: NextRequest) {
 
   let cacheId = cacheIdCookie?.value || crypto.randomUUID()
 
-  const regionMap = await getRegionMap(cacheId)
+  let regionMap: Map<string, HttpTypes.StoreRegion | number>
+
+  try {
+    regionMap = await getRegionMap(cacheId)
+  } catch (e) {
+    console.error("Middleware: failed to fetch region map:", e)
+    // Fall back to default region so the site still loads
+    const fallback = DEFAULT_REGION || "in"
+    const redirectPath =
+      request.nextUrl.pathname === "/" ? "" : request.nextUrl.pathname
+    const queryString = request.nextUrl.search ? request.nextUrl.search : ""
+    return NextResponse.redirect(
+      `${request.nextUrl.origin}/${fallback}${redirectPath}${queryString}`,
+      307
+    )
+  }
 
   const countryCode = regionMap && (await getCountryCode(request, regionMap))
 
