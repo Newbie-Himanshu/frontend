@@ -118,13 +118,15 @@ export async function middleware(request: NextRequest) {
     regionMap = await getRegionMap(cacheId)
   } catch (e) {
     console.error("Middleware: failed to fetch region map:", e)
-    // Fall back to default region so the site still loads
+    // If URL already has a country code segment, just let it through
+    const firstSegment = request.nextUrl.pathname.split("/")[1]?.toLowerCase()
+    if (firstSegment && firstSegment.length === 2) {
+      return NextResponse.next()
+    }
+    // Otherwise redirect to default region once
     const fallback = DEFAULT_REGION || "in"
-    const redirectPath =
-      request.nextUrl.pathname === "/" ? "" : request.nextUrl.pathname
-    const queryString = request.nextUrl.search ? request.nextUrl.search : ""
     return NextResponse.redirect(
-      `${request.nextUrl.origin}/${fallback}${redirectPath}${queryString}`,
+      `${request.nextUrl.origin}/${fallback}`,
       307
     )
   }
