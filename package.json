@@ -62,5 +62,5 @@
     "react": "19.0.4",
     "react-dom": "19.0.4"
   },
-  "packageManager": "npm@10.9.4"
-}yarn@1.22.22
+  "packageManager": "yarn@1.22.22"
+}
