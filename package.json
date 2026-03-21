@@ -12,9 +12,9 @@
     "medusa-storefront"
   ],
   "scripts": {
-    "dev": "next dev --turbopack -p 8000",
+    "dev": "next dev --turbopack",
     "build": "next build",
-    "start": "next start -p 8000",
+    "start": "next start",
     "lint": "next lint",
     "analyze": "ANALYZE=true next build"
   },
@@ -30,7 +30,6 @@
     "autoprefixer": "^10.4.2",
     "lodash": "^4.17.21",
     "next": "15.5.12",
-    "pg": "^8.11.3",
     "postcss": "^8.4.8",
     "qs": "^6.12.1",
     "react": "19.0.4",
@@ -47,7 +46,6 @@
     "@types/lodash": "^4.14.195",
     "@types/node": "17.0.21",
     "@types/pg": "^8.11.0",
-    "@types/react": "19.0.3",
     "@types/react-dom": "19.0.3",
     "@types/react-instantsearch-dom": "^6.12.3",
     "babel-loader": "^8.2.3",
@@ -65,4 +63,4 @@
     "react-dom": "19.0.4"
   },
   "packageManager": "npm@10.9.4"
-}
+}yarn@1.22.22
